@@ -106,7 +106,8 @@ public class Jugador : MonoBehaviour
 
         if (vida <= 0)
         {
-            Debug.Log("Jugador muerto");
+           GameManager.instancia.GameOver();
+           Destroy(gameObject);
         }
     }
 
