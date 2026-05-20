@@ -6,35 +6,42 @@ public class GameManager : MonoBehaviour
     public static GameManager instancia;
 
     public int puntos;
-
     public TMP_Text textoPuntos;
 
-    public GameObject panelGameOver;
+    private bool juegoTerminado = false;
 
     private void Awake()
     {
         instancia = this;
     }
 
-    void Start()
+    private void Start()
     {
-        panelGameOver.SetActive(false);
+        Time.timeScale = 1f;
+        ActualizarTextoPuntos();
     }
 
     public void SumarPuntos(int cantidad)
     {
-        puntos += cantidad;
+        if (juegoTerminado) return;
 
-        textoPuntos.text = "Puntos: " + puntos;
+        puntos += cantidad;
+        ActualizarTextoPuntos();
+    }
+
+    private void ActualizarTextoPuntos()
+    {
+        if (textoPuntos != null)
+            textoPuntos.text = "" +puntos;
     }
 
     public void GameOver()
     {
-        panelGameOver.SetActive(true);
+        if (juegoTerminado) return;
 
+        juegoTerminado = true;
         Time.timeScale = 0f;
 
-        Records.instancia
-            .RevisarNuevoRecord(puntos);
+        Records.instancia.RevisarNuevoRecord(puntos);
     }
 }

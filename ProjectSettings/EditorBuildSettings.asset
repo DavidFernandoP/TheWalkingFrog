@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Establo.unity
     guid: c1052d0dca9af334985e1974b08824be
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: fa91cec592d34b043a3c79ca6c09c02d
   m_configObjects: {}

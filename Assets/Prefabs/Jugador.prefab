@@ -311,7 +311,9 @@ MonoBehaviour:
   fuerzaSalto: 5
   animator: {fileID: 4730615164978629141}
   bastonCollider: {fileID: 3101244619397998149}
-  vida: 100
+  vidaMaxima: 50
+  vida: 50
+  barraVida: {fileID: 0}
   fuerzaKnockback: 8
   tiempoKnockback: 0.2
 --- !u!95 &4730615164978629141
