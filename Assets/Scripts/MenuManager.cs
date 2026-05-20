@@ -8,6 +8,16 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Zonas");
     }
 
+    public void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+
+    public void VolverMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void Salir()
     {
         Application.Quit();
@@ -23,8 +33,4 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Establo");
     }
 
-    public void VolverMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
 }

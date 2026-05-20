@@ -8,7 +8,7 @@ public class Rana : MonoBehaviour
     private Rigidbody2D rb;
     public int danio;
     public int vida = 30;
-    public int puntos = 10;
+    public int puntos = 1;
 
     private bool enSuelo = true;
 

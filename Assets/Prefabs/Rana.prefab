@@ -166,7 +166,7 @@ MonoBehaviour:
   fuerzaSalto: 5
   danio: 5
   vida: 30
-  puntos: 10
+  puntos: 1
   animator: {fileID: 5294737146130151299}
 --- !u!95 &5294737146130151299
 Animator:
